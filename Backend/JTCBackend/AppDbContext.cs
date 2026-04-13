@@ -12,5 +12,6 @@ namespace JTCBackend
         public DbSet<Member> Members { get; set; }
         public DbSet<BookingRequest> BookingRequests { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<GalleryImage> GalleryImages { get; set; }
     }
 }

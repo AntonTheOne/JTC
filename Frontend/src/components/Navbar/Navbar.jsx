@@ -22,8 +22,8 @@ function Navbar() {
         <ul className="navbar-links">
           <li><Link to="/" onClick={() => setIsOpen(false)}>Hem</Link></li>
           <li><Link to="/member" onClick={() => setIsOpen(false)}>Om oss</Link></li>
-          <li><Link to="/spelningar" onClick={() => setIsOpen(false)}>Spelningar</Link></li>
-          <li><Link to="/galleri" onClick={() => setIsOpen(false)}>Galleri</Link></li>
+          <li><Link to="/gig" onClick={() => setIsOpen(false)}>Spelningar</Link></li>
+          <li><Link to="/gallery" onClick={() => setIsOpen(false)}>Galleri</Link></li>
           <li><Link to="/bokning" onClick={() => setIsOpen(false)}>Kontakt</Link></li>
         </ul>
       </nav>

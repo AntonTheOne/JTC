@@ -19,3 +19,10 @@ VALUES
 ('Test Title 2', 'Lite test data för content', 'https://placehold.co/600x400', '2026-04-10'),
 ('Test Title 3', 'Lite test data för content', 'https://placehold.co/600x400', '2026-04-9'),
 ('Test Title 4', 'Lite test data för content', 'https://placehold.co/600x400', '2026-04-8')
+
+INSERT INTO GalleryImages (ImageURL, Caption, CreatedAT)
+VALUES
+('https://placehold.co/600x400', 'Test Bild för galleri', '2026-04-10'),
+('https://placehold.co/600x400', 'Test Bild för galleri', '2026-04-10'),
+('https://placehold.co/600x400', 'Test Bild för galleri', '2026-04-10'),
+('https://placehold.co/600x400', 'Test Bild för galleri', '2026-04-10')

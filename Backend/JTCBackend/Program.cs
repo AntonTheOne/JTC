@@ -28,6 +28,10 @@ builder.Services.AddScoped<MemberRepositories>();
 builder.Services.AddScoped<MemberServices>();
 builder.Services.AddScoped<BookingRequestRepository>();
 builder.Services.AddScoped<BookingRequestService>();
+builder.Services.AddScoped<GigRepository>();
+builder.Services.AddScoped<GigService>();
+builder.Services.AddScoped<GalleryRepository>();
+builder.Services.AddScoped<GalleryService>();
 
 var app = builder.Build();
 

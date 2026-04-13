@@ -56,6 +56,28 @@ namespace JTCBackend.Migrations
                     b.ToTable("BookingRequests");
                 });
 
+            modelBuilder.Entity("JTCBackend.Models.GalleryImage", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Caption")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ImageUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("GalleryImages");
+                });
+
             modelBuilder.Entity("JTCBackend.Models.Gig", b =>
                 {
                     b.Property<int>("Id")

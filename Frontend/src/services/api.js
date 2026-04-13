@@ -13,5 +13,7 @@ export async function apiPost(url, body) {
         },
         body: JSON.stringify(body)
     });
-    return await response.json();
+    
+    const text = await response.text();
+    return text ? JSON.parse(text) : null;
 }

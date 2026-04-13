@@ -25,6 +25,21 @@
   line-height: 1.6;
 }
 
+.bokning-form-wrap {
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.bokning-form-wrap.sending {
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+.bokning-form-wrap.hidden {
+  display: none;
+}
+
 .bokning-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -107,10 +122,59 @@
   background: #aa0000;
 }
 
-.bokning-success {
-  color: #cc0000;
-  font-size: 1rem;
-  letter-spacing: 0.1rem;
+/* Success */
+.bokning-success-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  text-align: center;
+  animation: fadeUp 0.5s ease forwards;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.bokning-check-circle {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: 2px solid #cc0000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: popIn 0.4s ease 0.1s both;
+}
+
+@keyframes popIn {
+  from { transform: scale(0); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.bokning-check {
+  stroke-dasharray: 30;
+  stroke-dashoffset: 30;
+  animation: drawCheck 0.4s ease 0.4s forwards;
+}
+
+@keyframes drawCheck {
+  to { stroke-dashoffset: 0; }
+}
+
+.bokning-success-title {
+  color: white;
+  font-size: 1.1rem;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+}
+
+.bokning-success-text {
+  color: #666;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  max-width: 300px;
 }
 
 @media (min-width: 768px) {
