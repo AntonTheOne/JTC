@@ -1,0 +1,131 @@
+.navbar {
+  background: black;
+  border-bottom: 2px solid #cc0000;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4rem;
+  position: relative;
+  
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.navbar-logo {
+  height: 3rem;
+  width: auto;
+}
+
+.navbar-title {
+  color: #888;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+
+/* Hamburger */
+.navbar-hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 100;
+}
+
+.hamburger-line {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background: white;
+  transition: all 0.3s ease;
+}
+
+.hamburger-line.open:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger-line.open:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-line.open:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Mobile nav */
+.navbar-nav {
+  display: none;
+  position: absolute;
+  top: 4rem;
+  left: 0;
+  right: 0;
+  background: black;
+  border-bottom: 2px solid #cc0000;
+  padding: 1rem 0;
+}
+
+.navbar-nav.open {
+  display: block;
+}
+
+.navbar-links {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li {
+  border-top: 1px solid #222;
+}
+
+.navbar-links a {
+  display: block;
+  padding: 1rem 2rem;
+  color: #ccc;
+  text-decoration: none;
+  font-size: 0.875rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.navbar-links a:hover {
+  color: #cc0000;
+}
+
+/* Tablet och desktop */
+@media (min-width: 768px) {
+  .navbar-hamburger {
+    display: none;
+  }
+
+  .navbar-nav {
+    display: block;
+    position: static;
+    background: none;
+    border: none;
+    padding: 0;
+  }
+
+  .navbar-links {
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .navbar-links li {
+    border: none;
+  }
+
+  .navbar-links a {
+    padding: 0;
+  }
+}

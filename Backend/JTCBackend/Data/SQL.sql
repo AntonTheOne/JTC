@@ -12,3 +12,10 @@ VALUES ('Anna Arrangör', 'anna@test.se', 'Hej! Kan ni spela på vårt event?', 
 
 INSERT INTO Users (Username, PasswordHash)
 VALUES ('admin', 'temporärt_lösenord')
+
+
+INSERT INTO Posts (Title, Content, ImageUrl, CreatedAt)
+VALUES 
+('Test Title 2', 'Lite test data för content', 'https://placehold.co/600x400', '2026-04-10'),
+('Test Title 3', 'Lite test data för content', 'https://placehold.co/600x400', '2026-04-9'),
+('Test Title 4', 'Lite test data för content', 'https://placehold.co/600x400', '2026-04-8')

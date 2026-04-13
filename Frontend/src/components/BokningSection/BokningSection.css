@@ -1,0 +1,130 @@
+.bokning-section {
+  background: #0a0a0a;
+  padding: 4rem 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.bokning-header {
+  border-left: 3px solid #cc0000;
+  padding-left: 1rem;
+  margin-bottom: 2rem;
+}
+
+.bokning-heading {
+  color: white;
+  font-size: 1.25rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.bokning-intro {
+  color: #666;
+  font-size: 0.8rem;
+  line-height: 1.6;
+}
+
+.bokning-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.bokning-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.bokning-field label {
+  color: #888;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.bokning-field input,
+.bokning-field textarea {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 4px;
+  padding: 0.6rem 0.75rem;
+  color: white;
+  font-size: 0.875rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.bokning-field textarea {
+  height: 120px;
+  resize: none;
+}
+
+.bokning-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.bokning-kontakt {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.bokning-kontakt span {
+  color: #666;
+  font-size: 0.8rem;
+}
+
+.bokning-kontakt a {
+  color: #cc0000;
+  text-decoration: none;
+}
+
+.bokning-kontakt a:hover {
+  text-decoration: underline;
+}
+
+.bokning-btn {
+  background: #cc0000;
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+.bokning-btn:hover {
+  background: #aa0000;
+}
+
+.bokning-success {
+  color: #cc0000;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+}
+
+@media (min-width: 768px) {
+  .bokning-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .bokning-footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .bokning-btn {
+    align-self: auto;
+  }
+}

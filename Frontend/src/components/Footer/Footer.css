@@ -1,0 +1,45 @@
+.footer {
+  background: black;
+  border-top: 1px solid #222;
+  padding: 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+.footer-copy {
+  color: #555;
+  font-size: 0.75rem;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.footer-links a {
+  color: #555;
+  font-size: 0.75rem;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: #cc0000;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .footer-links {
+    flex-direction: row;
+    gap: 1rem;
+  }
+}
