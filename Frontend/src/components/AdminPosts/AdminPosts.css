@@ -1,0 +1,167 @@
+.admin-posts {
+  max-width: 900px;
+}
+
+.admin-posts-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.admin-posts-title {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #111;
+  margin: 0;
+}
+
+.admin-btn-red {
+  background: #cc0000;
+  color: white;
+  border: none;
+  padding: 0.5rem 1.25rem;
+  font-size: 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.admin-btn-red:hover {
+  background: #aa0000;
+}
+
+.admin-btn-ghost {
+  background: none;
+  border: 1px solid #e0e0e0;
+  color: #555;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.admin-btn-ghost:hover {
+  border-color: #999;
+  color: #111;
+}
+
+.admin-posts-form {
+  background: #fff9f9;
+  border: 1px solid #cc0000;
+  border-radius: 6px;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.admin-posts-form-title {
+  color: #cc0000;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.admin-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.admin-form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 0.75rem;
+}
+
+.admin-form-field label {
+  color: #888;
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.admin-form-field input,
+.admin-form-field textarea {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  color: #111;
+}
+
+.admin-form-field textarea {
+  height: 80px;
+  resize: none;
+}
+
+.admin-form-actions {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+}
+
+.admin-posts-list {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.admin-post-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.admin-post-row:last-child {
+  border-bottom: none;
+}
+
+.admin-post-img {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 4px;
+  flex-shrink: 0;
+  background: #f0f0f0;
+}
+
+.admin-post-info {
+  flex: 1;
+}
+
+.admin-post-title {
+  color: #111;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.admin-post-date {
+  color: #999;
+  font-size: 0.75rem;
+  margin-top: 2px;
+}
+
+.admin-post-actions {
+  display: flex;
+  gap: 4px;
+}
+
+.admin-icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px 8px;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.admin-icon-btn:hover {
+  background: #f0f0f0;
+}

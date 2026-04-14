@@ -1,0 +1,118 @@
+.admin-home {
+  max-width: 900px;
+}
+
+.admin-home-header {
+  margin-bottom: 2rem;
+}
+
+.admin-home-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #111;
+  margin: 0;
+}
+
+.admin-home-sub {
+  color: #999;
+  font-size: 0.875rem;
+  margin-top: 4px;
+}
+
+.admin-stat-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.admin-stat-card {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 1.25rem;
+}
+
+.admin-stat-card.highlight {
+  border-color: #cc0000;
+}
+
+.admin-stat-label {
+  color: #999;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.admin-stat-number {
+  color: #cc0000;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.admin-stat-sub {
+  color: #999;
+  font-size: 0.75rem;
+  margin-top: 4px;
+}
+
+.admin-recent {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.admin-recent-header {
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.admin-recent-title {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #111;
+  margin: 0;
+}
+
+.admin-recent-row {
+  padding: 0.875rem 1.25rem;
+  border-bottom: 1px solid #f0f0f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-recent-row:last-child {
+  border-bottom: none;
+}
+
+.admin-recent-name {
+  color: #333;
+  font-size: 0.875rem;
+}
+
+.admin-recent-date {
+  color: #999;
+  font-size: 0.75rem;
+  margin-top: 2px;
+}
+
+.admin-recent-empty {
+  padding: 1.25rem;
+  color: #999;
+  font-size: 0.875rem;
+}
+
+.admin-badge {
+  font-size: 0.7rem;
+  padding: 3px 10px;
+  border-radius: 10px;
+}
+
+.admin-badge.pending {
+  background: #fff3e0;
+  color: #e65100;
+}
