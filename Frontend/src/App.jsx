@@ -10,6 +10,10 @@ import Gallery from './pages/Gallery';
 import AdminHome from './pages/AdminHome';
 import AdminLayout from './components/AdminLayout/AdminLayout';
 import AdminPosts from './pages/AdminPostsPage';
+import AdminBokning from './pages/AdminBokning';
+import AdminGigsPage from './pages/AdminGigs';
+import AdminMembersPage from './pages/AdminMembersPage';
+import AdminGalleryPage from './pages/AdminGalleryPage';
 
 function App() {
   const location = useLocation();
@@ -28,6 +32,10 @@ function App() {
           <Route path="/admin" element={<AdminLayout />}>
             <Route index element={<AdminHome />} />
             <Route path="posts" element={<AdminPosts />} />
+            <Route path="bokning" element={<AdminBokning />} />
+            <Route path="gigs" element={<AdminGigsPage />} />
+            <Route path="members" element={<AdminMembersPage />} />
+            <Route path="gallery" element={<AdminGalleryPage />} />
           </Route>
         </Routes>
       </main>

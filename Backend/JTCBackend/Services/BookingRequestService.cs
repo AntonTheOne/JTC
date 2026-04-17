@@ -23,5 +23,22 @@ namespace JTCBackend.Services
             booking.Status = "Pending";
             await _repository.Add(booking);
         }
+
+        public async Task<BookingRequest?> GetById(int id)
+        {
+            return await _repository.GetById(id);
+        }
+
+        public async Task UpdateStatus(int id, string status, string? adminResponse = null)
+        {
+            var booking = await _repository.GetById(id);
+            if (booking == null) return;
+
+            booking.Status = status;
+            if (adminResponse != null)
+                booking.AdminResponse = adminResponse;
+
+            await _repository.UpdateStatus(booking);
+        }
     }
 }

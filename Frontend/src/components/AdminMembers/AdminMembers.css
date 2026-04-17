@@ -1,0 +1,241 @@
+.admin-members-section {
+    padding: 0;
+}
+
+.admin-members-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.admin-members-header h1 {
+    margin: 0;
+    font-size: 1.75rem;
+    font-weight: 500;
+    color: #111;
+}
+
+.admin-members-create-btn {
+    background: #c0392b;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 18px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.admin-members-create-btn:hover {
+    background: #a93226;
+}
+
+.admin-members-card {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.admin-members-row {
+    display: flex;
+    align-items: center;
+    padding: 12px 18px;
+    border-bottom: 1px solid #e5e5e5;
+    gap: 14px;
+}
+
+.admin-members-row:last-child {
+    border-bottom: none;
+}
+
+.admin-members-thumb {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #f0f0f0;
+    flex-shrink: 0;
+}
+
+.admin-members-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.admin-members-thumb-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-size: 18px;
+    font-weight: 500;
+    background: #f5f5f5;
+}
+
+.admin-members-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.admin-members-name {
+    font-size: 14px;
+    font-weight: 500;
+    color: #1a1a1a;
+}
+
+.admin-members-role {
+    font-size: 13px;
+    color: #888;
+}
+
+.admin-members-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.admin-members-icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    transition: background 0.15s;
+}
+
+.admin-members-icon-btn.edit {
+    color: #c0392b;
+}
+
+.admin-members-icon-btn.delete {
+    color: #888;
+}
+
+.admin-members-icon-btn:hover {
+    background: #f5f5f5;
+}
+
+.admin-members-empty {
+    padding: 2rem;
+    text-align: center;
+    color: #999;
+    font-size: 14px;
+}
+
+.admin-members-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.admin-members-modal {
+    background: #fff;
+    border-radius: 10px;
+    padding: 1.75rem;
+    width: 100%;
+    max-width: 480px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
+.admin-members-modal-small {
+    max-width: 380px;
+}
+
+.admin-members-modal h2 {
+    margin: 0 0 1.25rem 0;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #111;
+}
+
+.admin-members-modal p {
+    color: #555;
+    font-size: 14px;
+    margin: 0 0 1.5rem 0;
+}
+
+.admin-members-field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 1rem;
+}
+
+.admin-members-field label {
+    font-size: 12px;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.admin-members-field input,
+.admin-members-field textarea {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 9px 12px;
+    font-size: 14px;
+    color: #1a1a1a;
+    background: #fff;
+    font-family: inherit;
+    resize: none;
+}
+
+.admin-members-field input:focus,
+.admin-members-field textarea:focus {
+    outline: none;
+    border-color: #c0392b;
+}
+
+.admin-members-modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: 1.5rem;
+}
+
+.admin-members-cancel-btn {
+    background: #fff;
+    color: #555;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 8px 18px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+.admin-members-cancel-btn:hover {
+    background: #f5f5f5;
+}
+
+.admin-members-save-btn,
+.admin-members-delete-btn {
+    background: #c0392b;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.admin-members-save-btn:hover,
+.admin-members-delete-btn:hover {
+    background: #a93226;
+}

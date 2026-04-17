@@ -1,0 +1,246 @@
+.admin-gallery-section {
+    padding: 0;
+}
+
+.admin-gallery-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.admin-gallery-header h1 {
+    margin: 0;
+    font-size: 1.75rem;
+    font-weight: 500;
+    color: #111;
+}
+
+.admin-gallery-create-btn {
+    background: #c0392b;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 18px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.admin-gallery-create-btn:hover {
+    background: #a93226;
+}
+
+.admin-gallery-card {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    padding: 16px;
+}
+
+.admin-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.admin-gallery-tile {
+    position: relative;
+    aspect-ratio: 1;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #f0f0f0;
+}
+
+.admin-gallery-tile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.admin-gallery-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-size: 13px;
+    background: #f5f5f5;
+}
+
+.admin-gallery-tile-actions {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    gap: 6px;
+    opacity: 0;
+    transition: opacity 0.15s;
+}
+
+.admin-gallery-tile:hover .admin-gallery-tile-actions {
+    opacity: 1;
+}
+
+.admin-gallery-tile-btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.95);
+    border: none;
+    cursor: pointer;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s;
+}
+
+.admin-gallery-tile-btn:hover {
+    background: #fff;
+}
+
+.admin-gallery-tile-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px 10px 8px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.65), transparent);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.admin-gallery-empty {
+    padding: 3rem;
+    text-align: center;
+    color: #999;
+    font-size: 14px;
+}
+
+.admin-gallery-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.admin-gallery-modal {
+    background: #fff;
+    border-radius: 10px;
+    padding: 1.75rem;
+    width: 100%;
+    max-width: 480px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
+.admin-gallery-modal-small {
+    max-width: 380px;
+}
+
+.admin-gallery-modal h2 {
+    margin: 0 0 1.25rem 0;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #111;
+}
+
+.admin-gallery-modal p {
+    color: #555;
+    font-size: 14px;
+    margin: 0 0 1.5rem 0;
+}
+
+.admin-gallery-field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 1rem;
+}
+
+.admin-gallery-field label {
+    font-size: 12px;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.admin-gallery-field input {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 9px 12px;
+    font-size: 14px;
+    color: #1a1a1a;
+    background: #fff;
+    font-family: inherit;
+}
+
+.admin-gallery-field input:focus {
+    outline: none;
+    border-color: #c0392b;
+}
+
+.admin-gallery-preview {
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    overflow: hidden;
+    max-height: 200px;
+    background: #f5f5f5;
+}
+
+.admin-gallery-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    max-height: 200px;
+}
+
+.admin-gallery-modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: 1.5rem;
+}
+
+.admin-gallery-cancel-btn {
+    background: #fff;
+    color: #555;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 8px 18px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+.admin-gallery-cancel-btn:hover {
+    background: #f5f5f5;
+}
+
+.admin-gallery-save-btn,
+.admin-gallery-delete-btn {
+    background: #c0392b;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.admin-gallery-save-btn:hover,
+.admin-gallery-delete-btn:hover {
+    background: #a93226;
+}

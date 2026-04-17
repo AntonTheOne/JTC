@@ -22,5 +22,16 @@ namespace JTCBackend.Repositories
             _context.BookingRequests.Add(booking);
             await _context.SaveChangesAsync();
         }
+
+        public async Task<BookingRequest?> GetById(int id)
+        {
+            return await _context.BookingRequests.FindAsync(id);
+        }
+
+        public async Task UpdateStatus(BookingRequest booking)
+        {
+            _context.BookingRequests.Update(booking);
+            await _context.SaveChangesAsync();
+        }
     }
 }

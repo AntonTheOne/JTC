@@ -1,0 +1,181 @@
+.admin-bokning-section {
+    padding: 0;
+}
+
+.bokning-card {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.bokning-row {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.bokning-row:last-child {
+    border-bottom: none;
+}
+
+.bokning-row-header {
+    display: flex;
+    align-items: center;
+    padding: 14px 18px;
+    gap: 12px;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.bokning-row-header:hover {
+    background: #fafafa;
+}
+
+.bokning-row-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.bokning-name {
+    font-size: 14px;
+    font-weight: 500;
+    color: #1a1a1a;
+}
+
+.bokning-date {
+    font-size: 13px;
+    color: #888;
+}
+
+.bokning-arrow {
+    font-size: 16px;
+    color: #bbb;
+}
+
+.badge {
+    display: inline-block;
+    font-size: 12px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+.badge-pending {
+    background: #faeeda;
+    color: #854f0b;
+}
+
+.badge-confirmed {
+    background: #eaf3de;
+    color: #3b6d11;
+}
+
+.badge-declined {
+    background: #fcebeb;
+    color: #a32d2d;
+}
+
+.bokning-details {
+    padding: 16px 18px 18px;
+    border-top: 1px solid #e5e5e5;
+    background: #fafafa;
+}
+
+.bokning-details-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.field-label {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 3px;
+}
+
+.field-val {
+    font-size: 14px;
+    color: #1a1a1a;
+}
+
+.field-italic {
+    font-style: italic;
+    color: #555;
+}
+
+.bokning-message {
+    margin-bottom: 14px;
+}
+
+.bokning-previous-response {
+    margin-bottom: 14px;
+    padding: 10px 12px;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+}
+
+.status-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.status-btn {
+    font-size: 12px;
+    padding: 5px 14px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    background: #fff;
+    color: #555;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.15s;
+}
+
+.status-btn:hover {
+    border-color: #bbb;
+}
+
+.status-btn-active {
+    background: #c0392b;
+    color: #fff;
+    border-color: #c0392b;
+}
+
+.bokning-textarea {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 14px;
+    color: #1a1a1a;
+    background: #fff;
+    resize: none;
+    min-height: 90px;
+    font-family: inherit;
+    margin-bottom: 10px;
+}
+
+.bokning-textarea:focus {
+    outline: none;
+    border-color: #c0392b;
+}
+
+.bokning-submit-btn {
+    background: #c0392b;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.bokning-submit-btn:hover {
+    background: #a93226;
+}

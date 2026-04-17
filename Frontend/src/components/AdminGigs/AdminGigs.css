@@ -1,0 +1,225 @@
+.admin-gigs-section {
+    padding: 0;
+}
+
+.admin-gigs-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.admin-gigs-header h1 {
+    margin: 0;
+    font-size: 1.75rem;
+    font-weight: 500;
+    color: #111;
+}
+
+.admin-gigs-create-btn {
+    background: #c0392b;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 18px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.admin-gigs-create-btn:hover {
+    background: #a93226;
+}
+
+.admin-gigs-card {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.admin-gigs-row {
+    display: flex;
+    align-items: center;
+    padding: 14px 18px;
+    border-bottom: 1px solid #e5e5e5;
+    gap: 12px;
+}
+
+.admin-gigs-row:last-child {
+    border-bottom: none;
+}
+
+.admin-gigs-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.admin-gigs-venue {
+    font-size: 14px;
+    font-weight: 500;
+    color: #1a1a1a;
+}
+
+.admin-gigs-meta {
+    font-size: 13px;
+    color: #888;
+}
+
+.admin-gigs-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.admin-gigs-icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    transition: background 0.15s;
+}
+
+.admin-gigs-icon-btn.edit {
+    color: #c0392b;
+}
+
+.admin-gigs-icon-btn.delete {
+    color: #888;
+}
+
+.admin-gigs-icon-btn:hover {
+    background: #f5f5f5;
+}
+
+.admin-gigs-empty {
+    padding: 2rem;
+    text-align: center;
+    color: #999;
+    font-size: 14px;
+}
+
+.admin-gigs-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.admin-gigs-modal {
+    background: #fff;
+    border-radius: 10px;
+    padding: 1.75rem;
+    width: 100%;
+    max-width: 480px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
+.admin-gigs-modal-small {
+    max-width: 380px;
+}
+
+.admin-gigs-modal h2 {
+    margin: 0 0 1.25rem 0;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #111;
+}
+
+.admin-gigs-modal p {
+    color: #555;
+    font-size: 14px;
+    margin: 0 0 1.5rem 0;
+}
+
+.admin-gigs-field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 1rem;
+}
+
+.admin-gigs-field label {
+    font-size: 12px;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.admin-gigs-field input {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 9px 12px;
+    font-size: 14px;
+    color: #1a1a1a;
+    background: #fff;
+    font-family: inherit;
+}
+
+.admin-gigs-field input:focus {
+    outline: none;
+    border-color: #c0392b;
+}
+
+.admin-gigs-modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: 1.5rem;
+}
+
+.admin-gigs-cancel-btn {
+    background: #fff;
+    color: #555;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 8px 18px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+.admin-gigs-cancel-btn:hover {
+    background: #f5f5f5;
+}
+
+.admin-gigs-save-btn {
+    background: #c0392b;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.admin-gigs-save-btn:hover {
+    background: #a93226;
+}
+
+.admin-gigs-delete-btn {
+    background: #c0392b;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.admin-gigs-delete-btn:hover {
+    background: #a93226;
+}

@@ -31,7 +31,7 @@ function AdminSidebar() {
         <Link to="/admin/gallery" className={`admin-nav-item ${isActive('/admin/gallery') ? 'active' : ''}`}>
           Galleri
         </Link>
-        <Link to="/admin/bookings" className={`admin-nav-item ${isActive('/admin/bookings') ? 'active' : ''}`}>
+        <Link to="/admin/bokning" className={`admin-nav-item ${isActive('/admin/bokning') ? 'active' : ''}`}>
           Bokningar
         </Link>
       </nav>

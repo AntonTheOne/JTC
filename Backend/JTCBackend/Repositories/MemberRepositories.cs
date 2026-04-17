@@ -17,5 +17,27 @@ namespace JTCBackend.Repositories
             return await _context.Members.ToListAsync();
         }
 
+        public async Task<Member?> GetById(int id)
+        {
+            return await _context.Members.FindAsync(id);
+        }
+
+        public async Task Add(Member member)
+        {
+            _context.Members.Add(member);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task Update(Member member)
+        {
+            _context.Members.Update(member);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task Delete(Member member)
+        {
+            _context.Members.Remove(member);
+            await _context.SaveChangesAsync();
+        }
     }
 }

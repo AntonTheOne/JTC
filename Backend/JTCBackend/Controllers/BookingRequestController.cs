@@ -1,6 +1,7 @@
 ﻿using JTCBackend.Models;
 using JTCBackend.Services;
 using Microsoft.AspNetCore.Mvc;
+using JTCBackend.DTOs;
 
 namespace JTCBackend.Controllers
 {
@@ -25,6 +26,21 @@ namespace JTCBackend.Controllers
         public async Task<IActionResult> Add(BookingRequest booking)
         {
             await _service.Add(booking);
+            return Ok();
+        }
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult<BookingRequest>> GetById(int id)
+        {
+            var booking = await _service.GetById(id);
+            if (booking == null) return NotFound();
+            return Ok(booking);
+        }
+
+        [HttpPatch("{id}/status")]
+        public async Task<IActionResult> UpdateStatus(int id, [FromBody] UpdateStatusDto dto)
+        {
+            await _service.UpdateStatus(id, dto.Status, dto.AdminResponse);
             return Ok();
         }
     }
