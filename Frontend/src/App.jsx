@@ -14,10 +14,12 @@ import AdminBokning from './pages/AdminBokning';
 import AdminGigsPage from './pages/AdminGigs';
 import AdminMembersPage from './pages/AdminMembersPage';
 import AdminGalleryPage from './pages/AdminGalleryPage';
+import LoginPage from './pages/LoginPage';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 function App() {
   const location = useLocation();
-  const isAdmin = location.pathname.startsWith('/admin');
+  const isAdmin = location.pathname.startsWith('/admin') || location.pathname === '/login';
 
   return (
     <>
@@ -29,7 +31,12 @@ function App() {
           <Route path="/bokning" element={<Bokning />} />
           <Route path="/gig" element={<Gig />} />
           <Route path="/gallery" element={<Gallery />} />
-          <Route path="/admin" element={<AdminLayout />}>
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/admin" element={
+            <PrivateRoute>
+              <AdminLayout />
+            </PrivateRoute>
+          }>
             <Route index element={<AdminHome />} />
             <Route path="posts" element={<AdminPosts />} />
             <Route path="bokning" element={<AdminBokning />} />

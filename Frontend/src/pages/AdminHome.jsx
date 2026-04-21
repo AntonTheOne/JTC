@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { getAllPosts } from '../services/postService';
 import { getAllGigs } from '../services/GigService';
 import { getAllBookings } from '../services/bookingService';
-import './AdminHome.css';
+import './PagesCss/AdminHome.css';
 
 function AdminHome() {
   const [posts, setPosts] = useState([]);

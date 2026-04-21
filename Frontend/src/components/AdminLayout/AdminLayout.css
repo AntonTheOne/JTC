@@ -13,3 +13,21 @@ body{
   padding: 2rem;
   overflow-y: auto;
 }
+.logout-btn {
+  position: absolute;
+  top: 16px;
+  right: 24px;
+  background: none;
+  border: 1px solid #b22222;
+  color: #b22222;
+  padding: 6px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.2s;
+}
+
+.logout-btn:hover {
+  background-color: #b22222;
+  color: white;
+}
