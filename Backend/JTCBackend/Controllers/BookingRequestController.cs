@@ -1,10 +1,12 @@
 ﻿using JTCBackend.Models;
 using JTCBackend.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using JTCBackend.DTOs;
 
 namespace JTCBackend.Controllers
 {
+    [Authorize] // Allt kräver inloggning om inget annat anges
     [ApiController]
     [Route("api/[controller]")]
     public class BookingRequestController : ControllerBase
@@ -22,6 +24,7 @@ namespace JTCBackend.Controllers
             return await _service.GetAll();
         }
 
+        [AllowAnonymous]
         [HttpPost]
         public async Task<IActionResult> Add(BookingRequest booking)
         {

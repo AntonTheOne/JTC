@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { getAllBookings, updateBookingStatus } from '../../services/bookingService';
 import './AdminBokningSection.css';
 
 function AdminBokningSection() {
@@ -8,9 +9,9 @@ function AdminBokningSection() {
     const [statuses, setStatuses] = useState({});
 
     useEffect(() => {
-        fetch('http://localhost:8000/api/bookingrequest')
-            .then(res => res.json())
-            .then(data => setBookings(data));
+        getAllBookings()
+            .then(data => setBookings(data))
+            .catch(err => console.error(err));
     }, []);
 
     const toggleExpand = (id) => {
@@ -29,11 +30,7 @@ function AdminBokningSection() {
         const status = statuses[booking.id] || booking.status;
         const adminResponse = responses[booking.id] || '';
 
-        await fetch(`http://localhost:8000/api/bookingrequest/${booking.id}/status`, {
-            method: 'PATCH',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ status, adminResponse }),
-        });
+        await updateBookingStatus(booking.id, status, adminResponse);
 
         setBookings(prev =>
             prev.map(b => b.id === booking.id ? { ...b, status, adminResponse } : b)

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { login } from "../services/authService";
 import "./PagesCss/LoginPage.css";
 
 function LoginPage() {
@@ -11,17 +12,11 @@ function LoginPage() {
     async function handleLogin() {
         setError("");
 
-        const response = await fetch("http://localhost:8000/api/auth/login", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ username, password })
-        });
-
-        if (response.ok) {
-            const data = await response.json();
+        try {
+            const data = await login(username, password);
             localStorage.setItem("token", data.token);
             navigate("/admin");
-        } else {
+        } catch {
             setError("Fel användarnamn eller lösenord");
         }
     }

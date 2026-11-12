@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { getMembers, addMember, updateMember, deleteMember } from '../../services/memberService';
 import './AdminMembers.css';
 
 function AdminMembers() {
@@ -8,15 +9,15 @@ function AdminMembers() {
     const [confirmDeleteId, setConfirmDeleteId] = useState(null);
     const [form, setForm] = useState({ name: '', role: '', bio: '', imageUrl: '' });
 
+    const loadMembers = () => {
+        getMembers()
+            .then(data => setMembers(data))
+            .catch(err => console.error(err));
+    };
+
     useEffect(() => {
         loadMembers();
     }, []);
-
-    const loadMembers = () => {
-        fetch('http://localhost:8000/api/member')
-            .then(res => res.json())
-            .then(data => setMembers(data));
-    };
 
     const openCreateForm = () => {
         setForm({ name: '', role: '', bio: '', imageUrl: '' });
@@ -48,17 +49,9 @@ function AdminMembers() {
         e.preventDefault();
 
         if (editingId) {
-            await fetch(`http://localhost:8000/api/member/${editingId}`, {
-                method: 'PUT',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ id: editingId, ...form }),
-            });
+            await updateMember(editingId, form);
         } else {
-            await fetch('http://localhost:8000/api/member', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(form),
-            });
+            await addMember(form);
         }
 
         closeForm();
@@ -66,9 +59,7 @@ function AdminMembers() {
     };
 
     const handleDelete = async (id) => {
-        await fetch(`http://localhost:8000/api/member/${id}`, {
-            method: 'DELETE',
-        });
+        await deleteMember(id);
         setConfirmDeleteId(null);
         loadMembers();
     };

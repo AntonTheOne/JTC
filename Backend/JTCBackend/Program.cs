@@ -38,7 +38,14 @@ builder.Services.AddScoped<GalleryRepository>();
 builder.Services.AddScoped<GalleryService>();
 
 // JWT-konfiguration
+// Nyckeln ligger inte i appsettings.json. Sätt den med user-secrets lokalt
+// eller miljövariabeln Jwt__Key i produktion (se README).
 var jwtKey = builder.Configuration["Jwt:Key"];
+if (string.IsNullOrWhiteSpace(jwtKey) || Encoding.UTF8.GetByteCount(jwtKey) < 32)
+{
+    throw new InvalidOperationException(
+        "Jwt:Key saknas eller är kortare än 32 tecken. Kör: dotnet user-secrets set \"Jwt:Key\" \"<minst 32 slumpmässiga tecken>\"");
+}
 var jwtIssuer = builder.Configuration["Jwt:Issuer"];
 var jwtAudience = builder.Configuration["Jwt:Audience"];
 

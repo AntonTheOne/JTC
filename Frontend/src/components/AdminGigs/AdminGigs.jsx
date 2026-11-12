@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { getAllGigs, addGig, updateGig, deleteGig } from '../../services/GigService';
 import './AdminGigs.css';
 
 function AdminGigs() {
@@ -8,15 +9,15 @@ function AdminGigs() {
     const [confirmDeleteId, setConfirmDeleteId] = useState(null);
     const [form, setForm] = useState({ venue: '', city: '', date: '', ticketUrl: '' });
 
+    const loadGigs = () => {
+        getAllGigs()
+            .then(data => setGigs(data))
+            .catch(err => console.error(err));
+    };
+
     useEffect(() => {
         loadGigs();
     }, []);
-
-    const loadGigs = () => {
-        fetch('http://localhost:8000/api/gig')
-            .then(res => res.json())
-            .then(data => setGigs(data));
-    };
 
     const openCreateForm = () => {
         setForm({ venue: '', city: '', date: '', ticketUrl: '' });
@@ -55,17 +56,9 @@ function AdminGigs() {
         };
 
         if (editingId) {
-            await fetch(`http://localhost:8000/api/gig/${editingId}`, {
-                method: 'PUT',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ id: editingId, ...payload }),
-            });
+            await updateGig(editingId, payload);
         } else {
-            await fetch('http://localhost:8000/api/gig', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(payload),
-            });
+            await addGig(payload);
         }
 
         closeForm();
@@ -73,9 +66,7 @@ function AdminGigs() {
     };
 
     const handleDelete = async (id) => {
-        await fetch(`http://localhost:8000/api/gig/${id}`, {
-            method: 'DELETE',
-        });
+        await deleteGig(id);
         setConfirmDeleteId(null);
         loadGigs();
     };

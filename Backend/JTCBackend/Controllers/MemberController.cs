@@ -1,9 +1,11 @@
 ﻿using JTCBackend.Models;
 using JTCBackend.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace JTCBackend.Controllers
 {
+    [Authorize] // Allt kräver inloggning om inget annat anges
     [ApiController]
     [Route("api/[controller]")]
     public class MemberController : ControllerBase
@@ -15,12 +17,14 @@ namespace JTCBackend.Controllers
             _content = content;
         }
 
+        [AllowAnonymous]
         [HttpGet]
         public async Task<List<Member>> GetMebers()
         {
             return await _content.GetMembers();
         }
 
+        [AllowAnonymous]
         [HttpGet("{id}")]
         public async Task<ActionResult<Member>> GetById(int id)
         {

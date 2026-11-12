@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { apiPost } from '../../services/api';
+import { addBooking } from '../../services/bookingService';
 import './BokningSection.css';
 
 function BokningSection() {
@@ -20,7 +20,7 @@ function BokningSection() {
 
   async function handleSubmit() {
     setSending(true);
-    await apiPost('/api/bookingrequest', form);
+    await addBooking(form);
     setTimeout(() => {
       setSent(true);
     }, 400);
