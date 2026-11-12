@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { getAllGalleryItems, addGalleryItem, updateGalleryItem, deleteGalleryItem } from '../../services/GalleryService';
 import './AdminGallery.css';
 
 function AdminGallery() {
@@ -8,15 +9,15 @@ function AdminGallery() {
     const [confirmDeleteId, setConfirmDeleteId] = useState(null);
     const [form, setForm] = useState({ imageUrl: '', caption: '' });
 
+    const loadImages = () => {
+        getAllGalleryItems()
+            .then(data => setImages(data))
+            .catch(err => console.error(err));
+    };
+
     useEffect(() => {
         loadImages();
     }, []);
-
-    const loadImages = () => {
-        fetch('http://localhost:8000/api/gallery')
-            .then(res => res.json())
-            .then(data => setImages(data));
-    };
 
     const openCreateForm = () => {
         setForm({ imageUrl: '', caption: '' });
@@ -46,17 +47,9 @@ function AdminGallery() {
         e.preventDefault();
 
         if (editingId) {
-            await fetch(`http://localhost:8000/api/gallery/${editingId}`, {
-                method: 'PUT',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ id: editingId, ...form }),
-            });
+            await updateGalleryItem(editingId, form);
         } else {
-            await fetch('http://localhost:8000/api/gallery', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(form),
-            });
+            await addGalleryItem(form);
         }
 
         closeForm();
@@ -64,9 +57,7 @@ function AdminGallery() {
     };
 
     const handleDelete = async (id) => {
-        await fetch(`http://localhost:8000/api/gallery/${id}`, {
-            method: 'DELETE',
-        });
+        await deleteGalleryItem(id);
         setConfirmDeleteId(null);
         loadImages();
     };

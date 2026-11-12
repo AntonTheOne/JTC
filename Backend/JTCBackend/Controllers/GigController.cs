@@ -1,9 +1,11 @@
 ﻿using JTCBackend.Models;
 using JTCBackend.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace JTCBackend.Controllers
 {
+    [Authorize] // Allt kräver inloggning om inget annat anges
     [ApiController]
     [Route("api/[controller]")]
     public class GigController : ControllerBase
@@ -15,12 +17,14 @@ namespace JTCBackend.Controllers
             _service = service;
         }
 
+        [AllowAnonymous]
         [HttpGet]
         public async Task<List<Gig>> GetAll()
         {
             return await _service.GetAll();
         }
 
+        [AllowAnonymous]
         [HttpGet("{id}")]
         public async Task<ActionResult<Gig>> GetById(int id)
         {

@@ -1,9 +1,11 @@
 ﻿using JTCBackend.Models;
 using JTCBackend.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace JTCBackend.Controllers
 {
+    [Authorize] // Allt kräver inloggning om inget annat anges
     [ApiController]
     [Route("api/[controller]")]
     public class PostsController : ControllerBase
@@ -16,6 +18,7 @@ namespace JTCBackend.Controllers
             _services = services;
         }
 
+        [AllowAnonymous]
         [HttpGet]
         public async Task<List<Post>> GetPosts()
         {
